@@ -9,13 +9,17 @@ const navToggle = document.getElementById('navToggle');
 const mobileMenu = document.getElementById('mobileMenu');
 
 navToggle.addEventListener('click', () => {
-  mobileMenu.classList.toggle('active');
-  document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+  const isOpen = mobileMenu.classList.toggle('active');
+  navToggle.classList.toggle('active', isOpen);
+  navToggle.setAttribute('aria-expanded', isOpen);
+  document.body.style.overflow = isOpen ? 'hidden' : '';
 });
 
 mobileMenu.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => {
     mobileMenu.classList.remove('active');
+    navToggle.classList.remove('active');
+    navToggle.setAttribute('aria-expanded', 'false');
     document.body.style.overflow = '';
   });
 });

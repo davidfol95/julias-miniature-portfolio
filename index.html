@@ -4,6 +4,75 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Julia Rosenbaum — Miniature Artist</title>
+  <meta name="description" content="Julia Rosenbaum creates hand-sculpted miniature dioramas from polymer clay. Explore her portfolio of tiny storefronts, restaurant scenes, and intricate detail work — each piece shaped entirely by hand.">
+  <link rel="canonical" href="https://julia-rosenbaum.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Julia Rosenbaum — Miniature Artist">
+  <meta property="og:description" content="Hand-sculpted miniature dioramas made from polymer clay. Tiny storefronts, scenes, and details — each piece shaped entirely by hand.">
+  <meta property="og:image" content="https://julia-rosenbaum.com/images/grocery-store-hero.webp">
+  <meta property="og:url" content="https://julia-rosenbaum.com">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Julia Rosenbaum">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Julia Rosenbaum — Miniature Artist">
+  <meta name="twitter:description" content="Hand-sculpted miniature dioramas made from polymer clay. Tiny storefronts, scenes, and details — each piece shaped entirely by hand.">
+  <meta name="twitter:image" content="https://julia-rosenbaum.com/images/grocery-store-hero.webp">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "name": "Julia Rosenbaum",
+        "url": "https://julia-rosenbaum.com"
+      },
+      {
+        "@type": "Person",
+        "name": "Julia Rosenbaum",
+        "jobTitle": "Miniature Artist",
+        "url": "https://julia-rosenbaum.com",
+        "description": "Hand-sculpts miniature dioramas from polymer clay, including storefronts, restaurant scenes, and intricate detail work.",
+        "knowsAbout": ["Miniature sculpture", "Polymer clay", "Diorama art", "Mixed media art"]
+      },
+      {
+        "@type": "VisualArtwork",
+        "name": "The Corner Bakery",
+        "artist": { "@type": "Person", "name": "Julia Rosenbaum" },
+        "artMedium": "Clay, cardboard & mixed media",
+        "artform": "Miniature diorama",
+        "description": "A neighborhood bakery with hand-sculpted pastries, breads, and cakes in a glass display case.",
+        "image": "https://julia-rosenbaum.com/images/bakery.webp"
+      },
+      {
+        "@type": "VisualArtwork",
+        "name": "Friday Night Dinner",
+        "artist": { "@type": "Person", "name": "Julia Rosenbaum" },
+        "artMedium": "Clay, cardboard & mixed media",
+        "artform": "Miniature diorama",
+        "description": "A bustling restaurant scene with sculpted characters mid-meal, red booths, and a chalkboard menu.",
+        "image": "https://julia-rosenbaum.com/images/restaurant.webp"
+      },
+      {
+        "@type": "VisualArtwork",
+        "name": "The Toy Shop",
+        "artist": { "@type": "Person", "name": "Julia Rosenbaum" },
+        "artMedium": "Clay, cardboard & mixed media",
+        "artform": "Miniature diorama",
+        "description": "A colorful toy store packed with miniature rocking horses, puzzles, stuffed animals, and board games.",
+        "image": "https://julia-rosenbaum.com/images/toy-store.webp"
+      }
+    ]
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
@@ -12,8 +81,12 @@
   <script src="js/gallery.js" defer></script>
   <script src="js/navigation.js" defer></script>
   <script src="js/effects.js" defer></script>
-  <script src="js/contact.js" defer></script></head>
+  <script src="js/contact.js" defer></script>
+</head>
 <body>
+
+  <!-- Skip to Content -->
+  <a href="#featured" class="skip-link">Skip to content</a>
 
   <!-- Navigation -->
   <header class="nav" id="nav">
@@ -25,7 +98,7 @@
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -44,7 +117,7 @@
   <!-- Hero -->
   <section class="hero" id="hero">
     <div class="hero-image-wrap">
-      <img src="images/grocery-store-hero.webp" alt="Miniature grocery store sculpture close-up">
+      <img src="images/grocery-store-hero.webp" alt="Miniature grocery store sculpture close-up" fetchpriority="high">
     </div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
@@ -72,48 +145,48 @@
         <!-- Piece 1 -->
         <article class="featured-piece reveal">
           <div class="featured-image">
-            <img src="images/bakery.webp" alt="Miniature bakery diorama">
+            <img src="images/bakery.webp" alt="Miniature bakery diorama" loading="lazy">
           </div>
           <div class="featured-info">
             <span class="featured-category">Storefronts</span>
             <h3 class="featured-name">The Corner Bakery</h3>
             <p class="featured-desc">A bustling neighborhood bakery complete with a glass display case of hand-sculpted pastries, cakes, and breads. Each loaf and croissant was individually shaped from clay — the shelves behind the counter hold over fifty tiny baked goods and packaged treats.</p>
-            <a href="#" class="featured-link" data-gallery-open="0">
+            <button class="featured-link" data-gallery-open="0">
               View details
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
+            </button>
           </div>
         </article>
 
         <!-- Piece 2 -->
         <article class="featured-piece reveal">
           <div class="featured-image">
-            <img src="images/restaurant.webp" alt="Miniature restaurant diorama">
+            <img src="images/restaurant.webp" alt="Miniature restaurant diorama" loading="lazy">
           </div>
           <div class="featured-info">
             <span class="featured-category">Scenes</span>
             <h3 class="featured-name">Friday Night Dinner</h3>
             <p class="featured-desc">A lively restaurant scene frozen in mid-evening — diners mid-conversation, plates piled with sculpted food, bottles on the shelf behind the bar. Every character has their own personality, from the couple sharing dessert to the waiter balancing a loaded tray.</p>
-            <a href="#" class="featured-link" data-gallery-open="3">
+            <button class="featured-link" data-gallery-open="3">
               View details
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
+            </button>
           </div>
         </article>
 
         <!-- Piece 3 -->
         <article class="featured-piece reveal">
           <div class="featured-image">
-            <img src="images/toy-store.webp" alt="Miniature toy store diorama">
+            <img src="images/toy-store.webp" alt="Miniature toy store diorama" loading="lazy">
           </div>
           <div class="featured-info">
             <span class="featured-category">Storefronts</span>
             <h3 class="featured-name">The Toy Shop</h3>
             <p class="featured-desc">A wonderland of tiny toys — rocking horses, puzzles, stuffed animals, board games, and dolls line the shelves of this cheerful storefront. The warm lighting and checkered floor give it the feel of a classic neighborhood toy shop that's been there for generations.</p>
-            <a href="#" class="featured-link" data-gallery-open="4">
+            <button class="featured-link" data-gallery-open="4">
               View details
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
+            </button>
           </div>
         </article>
       </div>
@@ -147,7 +220,7 @@
     <div class="container">
       <div class="about-grid">
         <div class="about-portrait reveal">
-          <img src="images/the-artist.webp" alt="Julia Rosenbaum in her studio">
+          <img src="images/the-artist.webp" alt="Julia Rosenbaum in her studio" loading="lazy">
         </div>
         <div class="about-text">
           <span class="section-label reveal">About</span>
@@ -159,17 +232,17 @@
           </div>
 
           <div class="about-process reveal">
-            <h3>The Workspace</h3>
-            <p>A peek behind the curtain — natural light, a mountain of clay, and an ever-growing collection of reference photos pinned to the wall.</p>
+            <h3>Up Close</h3>
+            <p>The joy of miniatures is in the details — tiny labels on jars, individual leaves on vegetables, the way light catches a row of bottles. Here are a few favorite moments from across the collection.</p>
             <div class="process-images">
               <div class="process-img">
-                <img src="images/vegetable-aisle.webp" alt="Vegetable aisle detail shot">
+                <img src="images/vegetable-aisle.webp" alt="Close-up of hand-sculpted miniature vegetables and produce" loading="lazy">
               </div>
               <div class="process-img">
-                <img src="images/laundromat.webp" alt="Laundromat work in progress">
+                <img src="images/laundromat.webp" alt="Detail of miniature laundromat with washing machines and colorful clothes" loading="lazy">
               </div>
               <div class="process-img">
-                <img src="images/bakery.webp" alt="Bakery diorama detail">
+                <img src="images/bakery.webp" alt="Close-up of miniature bakery shelves with tiny pastries and breads" loading="lazy">
               </div>
             </div>
           </div>
@@ -203,11 +276,11 @@
           <form id="contactForm" onsubmit="return false;">
             <div class="form-group">
               <label for="name">Name</label>
-              <input type="text" id="name" name="name" placeholder="Your name">
+              <input type="text" id="name" name="name" placeholder="Your name" required>
             </div>
             <div class="form-group">
               <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="you@example.com">
+              <input type="email" id="email" name="email" placeholder="you@example.com" required>
             </div>
             <div class="form-group">
               <label for="subject">Subject</label>
@@ -215,7 +288,7 @@
             </div>
             <div class="form-group">
               <label for="message">Message</label>
-              <textarea id="message" name="message" placeholder="Tell me what you have in mind..."></textarea>
+              <textarea id="message" name="message" placeholder="Tell me what you have in mind..." required></textarea>
             </div>
             <button type="submit" class="form-submit">Send Message</button>
           </form>
@@ -230,21 +303,18 @@
       <div class="footer-inner">
         <span class="footer-logo">Julia Rosenbaum</span>
         <span class="footer-copy">&copy; 2026 Julia Rosenbaum. All rights reserved.</span>
-        <!-- TODO: Add social links -->
-        <div class="footer-socials">
-        </div>
       </div>
     </div>
   </footer>
 
   <!-- Lightbox -->
-  <div class="lightbox" id="lightbox">
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
     <button class="lightbox-close" id="lightboxClose" aria-label="Close">&#10005;</button>
     <div class="lightbox-content">
       <div class="lightbox-images" id="lightboxImages">
         <div class="lightbox-arrows">
-          <button class="lightbox-arrow" id="lightboxPrev" aria-label="Previous">&#8249;</button>
-          <button class="lightbox-arrow" id="lightboxNext" aria-label="Next">&#8250;</button>
+          <button class="lightbox-arrow" id="lightboxPrev" aria-label="Previous image">&#8249;</button>
+          <button class="lightbox-arrow" id="lightboxNext" aria-label="Next image">&#8250;</button>
         </div>
         <div class="lightbox-thumbnails" id="lightboxThumbs"></div>
       </div>
