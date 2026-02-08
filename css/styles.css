@@ -1,0 +1,5 @@
+/* Main stylesheet — import order matters (base → layout → gallery → responsive) */
+@import url('base.css');
+@import url('layout.css');
+@import url('gallery.css');
+@import url('responsive.css');
